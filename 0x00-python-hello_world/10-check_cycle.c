@@ -12,9 +12,9 @@ int check_cycle(listint_t *list)
 	current = list;
 	while (list != NULL)
 	{
+		n2 = 0;
 		while (current != NULL)
 		{
-			n2 = 0;
 			if (current->next == list->next && n1 != n2)
 				return (1);
 			current = current->next;

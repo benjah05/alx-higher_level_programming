@@ -13,6 +13,7 @@ int check_cycle(listint_t *list)
 	while (current != NULL)
 	{
 		temp = list;
+		n2 = 0;
 		while (temp != NULL)
 		{
 			if (temp == current && n1 != n2)

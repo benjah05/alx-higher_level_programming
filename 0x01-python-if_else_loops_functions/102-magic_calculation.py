@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def magic_calculation(a, b, c):
-    if a < b == False:
+    if not a < b:
         return (c)
-    if c > b == False:
+    if not c > b:
         return (a + b)
     return (a * b - c)

@@ -5,4 +5,4 @@ for i in range(1, 100):
     else:
         if i // 10 >= i % 10:
             continue
-    print(i, end=", " if i < 89 else "\n")
+    print("{}".format(i), end=", " if i < 89 else "\n")

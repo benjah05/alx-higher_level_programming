@@ -10,17 +10,17 @@ int check_cycle(listint_t *list)
 	int n1 = 0, n2;
 
 	current = list;
-	while (list != NULL)
+	while (current != NULL)
 	{
 		n2 = 0;
-		while (current != NULL)
+		while (list != NULL)
 		{
-			if (current->next == list->next && n1 != n2)
+			if (list->next == current->next && n1 != n2)
 				return (1);
-			current = current->next;
+			list = list->next;
 			n2++;
 		}
-		list = list->next;
+		current = current->next;
 		n1++;
 	}
 	return (0);

@@ -1,6 +1,7 @@
-#include <stdio.h>
 #include <Python.h>
-#include <listobject.h>
+#include </usr/include/python3.8/Python.h>
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * print_python_list_info - Print some basic info about Python lists
  * @p: object to struct PyObject
@@ -17,6 +18,7 @@ void print_python_list_info(PyObject *p)
 	for (i = 0; i < Py_SIZE(p); i++)
 	{
 		PyObject *item = PyList_GetItem(p, i);
+
 		if (item != NULL)
 			print("Element %d: %s\n", i, Py_TYPE(item)->tp_name);
 	}

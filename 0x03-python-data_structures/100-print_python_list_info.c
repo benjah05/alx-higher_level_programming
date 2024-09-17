@@ -1,7 +1,6 @@
 #include <Python.h>
-#include </usr/include/python3.8/Python.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include <object.h>
+#include <listobject.h>
 /**
  * print_python_list_info - Print some basic info about Python lists
  * @p: object to struct PyObject
@@ -9,17 +8,17 @@
  */
 void print_python_list_info(PyObject *p)
 {
-	int i;
+	PyObject *item;
+	Py_ssize_t size = Py_SIZE(p), i;
 
-	if (p == NULL)
+	if (!PyList_Check(p))
 		return;
-	print("[*] Size of the Python List = %d\n", Py_SIZE(p));
-	print("[*] Allocated = %d\n", ((PyListObject *)p)->allocated);
+	print("[*] Size of the Python List = %zd\n", size);
+	print("[*] Allocated = %zd\n", ((PyListObject *)p)->allocated);
 	for (i = 0; i < Py_SIZE(p); i++)
 	{
-		PyObject *item = PyList_GetItem(p, i);
-
+		item = PyList_GetItem(p, i);
 		if (item != NULL)
-			print("Element %d: %s\n", i, Py_TYPE(item)->tp_name);
+			print("Element %zd: %s\n", i, item->ob_type->tp_name);
 	}
 }

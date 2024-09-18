@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if not a_dictionary or (a_dictionary.keys() and a_dictionary.values() is None):
+    if not a_dictionary:
         return (None)
     bestScore = 0
     winner = None

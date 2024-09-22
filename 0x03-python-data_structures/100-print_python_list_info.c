@@ -7,7 +7,7 @@
  * @p: bytes object
  * Return: void
  */
-void print_python_bytes(PyObject *p)
+void print_python_list_info(PyObject *p)
 {
 	Py_ssize_t size, allocated, i;
 	PyObject *item;

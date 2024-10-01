@@ -50,9 +50,8 @@ class Square:
             size (int): side length of a square
         """
         if (self.__size == 0):
-            print("\n")
+            print()
         for i in range(self.__size):
             for j in range(self.__size):
                 print("#", end="")
-                if (j == self.__size - 1):
-                    print()
+            print()

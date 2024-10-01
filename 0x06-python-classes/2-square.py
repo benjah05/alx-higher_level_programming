@@ -3,12 +3,8 @@
 
 
 class Square:
-    """Represent a square
+    """Represent a square"""
 
-    Attributes:
-        __size (int): The size of the square's side
-
-    """
     def __init__(self, size=0):
         """Initialize a new square
 

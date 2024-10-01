@@ -4,6 +4,8 @@
 
 class Square:
     """Represent a square
+
+
     Attributes:
         __size (int): The size of the square's side
     """

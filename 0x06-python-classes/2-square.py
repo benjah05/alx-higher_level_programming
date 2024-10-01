@@ -9,12 +9,14 @@ class Square:
     """
     def __init__(self, size=0):
         """Initialize a new square
+
         Args:
             size (int): The square's side
 
         Raises:
             TypeError: size not an integer
             ValueError: size is less than 0
+
         """
         self.__size = size
         if (isinstance(self.__size, int) == False):

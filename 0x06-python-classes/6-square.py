@@ -77,7 +77,7 @@ class Square:
             position (tuple): tuple of the square's coordinates
         """
         if (self.__size == 0):
-            print()
+            print("")
             return
         for _ in range(self.__position[1]):
             print()

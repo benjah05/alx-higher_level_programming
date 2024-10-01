@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """Define class Square"""
 
 
@@ -18,8 +17,8 @@ class Square:
             TypeError: size not an integer
             ValueError: size is less than 0
         """
-        if (isinstance(self.__size, int) == False):
+        if (isinstance(size, int) == False):
             raise TypeError("size must be an integer")
-        if (self.__size < 0):
+        if (size < 0):
             raise ValueError("size must be >= 0")
-        self.__size = size
+        self.__size == size

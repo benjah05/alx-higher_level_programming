@@ -5,8 +5,8 @@
 class Square:
     """Represent class Square
     Attributes:
-        __size (int): side length of a square
-        __position (tuple): tuple of square coordinates
+        size (int): side length of a square
+        position (tuple): tuple of square coordinates
     """
     def __init__(self, size=0, position=(0, 0)):
         """Initialize a new square
@@ -14,8 +14,12 @@ class Square:
             size (int): side length of the square
             position (tuple): square coordinates
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
+    """Define what an object should return when converted to string"""
+    def __str__(self):
+        """Call my_print() function"""
+        self.my_print()
     """Use getter method"""
     @property
     def size(self):
@@ -56,9 +60,9 @@ class Square:
         Raises:
             TypeError: if position is not a tuple of 2 positive integers
         """
-        if (not isinstance(value, tuple) and
-                len(value) != 2 and
-                not all(isinstance(num, int) for num in value) and
+        if (not isinstance(value, tuple) or
+                len(value) != 2 or
+                not all(isinstance(num, int) for num in value) or
                 not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value

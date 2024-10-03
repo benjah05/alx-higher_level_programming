@@ -18,14 +18,14 @@ void print_python_list(PyObject *p)
 	size = var->ob_size;
 	alloc = list->allocated;
 	fflush(stdout);
-	print("[*] Python list info\n");
+	printf("[*] Python list info\n");
 	if (strcmp(p->ob_type->tp_name, "list") != 0)
 	{
-		print(" [ERROR] Invalid List Object\n");
+		printf(" [ERROR] Invalid List Object\n");
 		return;
 	}
-	print("[*] Size of the Python List = %ld\n", size);
-	print("[*] Allocated = %ld\n", alloc);
+	printf("[*] Size of the Python List = %ld\n", size);
+	printf("[*] Allocated = %ld\n", alloc);
 	for (i = 0; i < size; i++)
 	{
 		type = list->ob_item[i]->ob_type->tp_name;
@@ -87,5 +87,5 @@ void print_python_float(PyObject *p)
 	buffer = PyOS_double_to_string(float_object->ob_fval, 'r', 0,
 			Py_DTSF_ADD_DOT_0, NULL);
 	printf(" value: %s\n", buffer);
-	pyMem_Free(buffer);
+	PyMem_Free(buffer);
 }

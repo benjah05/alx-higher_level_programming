@@ -4,7 +4,6 @@
 
 import math
 
-
 class MagicClass:
     """Present class MagicClass
     Attributes:

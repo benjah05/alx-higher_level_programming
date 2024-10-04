@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 """Define class MagicClass"""
+
+
 import math
 
 
 class MagicClass:
     """Present class MagicClass
     Attributes:
-        __radius (int): radius of a circle"""
+        __radius (int): radius of a circle
+    """
     def __init__(self, radius=0):
         self.__radius = radius
         if type(radius) is not int and type(radius) is not float:

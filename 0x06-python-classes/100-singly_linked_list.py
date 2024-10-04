@@ -3,10 +3,10 @@
 
 
 class Node:
-    """Present class Node
-    Attributes:
-        __data (int): value of a node in a list
-        __next_node (Node): next node in a list
+    """Initialize class Node
+    Args:
+        data (int): value of a node in a list
+        next_node (Node): next node in a list
     """
     def __init__(self, data, next_node=None):
         self.data = data
@@ -40,35 +40,52 @@ class Node:
         """
         return (self.__next_node)
     """Use setter method"""
-    @data.setter
-    def data(self, value):
+    @next_node.setter
+    def next_node(self, value):
         """Set next_node
         Args:
             value (int): value to set to node
         Raises:
             TypeError: if node is not None or a node object
         """
-        if isinstance(value, Node) or value == None:
-            self.__next_node = value
-        else:
+        if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
-
-
+        self.__next_node = value
+        
 """Define a class SinglyLinkedList"""
 
 
 class SinglyLinkedList:
-    """Represent class SinglyLinkedList
-    Attributes:
-        __head (Node): pointer to the head of the list
-    """
+    """Initialize a new SinglyLinkedList"""
     def __init__(self):
-        pass
+        """Initialize the head to None"""
+        self.__head = None
     """print sorted list"""
     def sorted_insert(self, value):
-        """Assign value based on index
+        """Insert a new node and maintain a sorted order
         Args:
-            value (int): data to assign in next_node
+            value (Node): The new Node to insert
         """
-        for i in range(value):
-            self.__head[i] = value
+        new_node = Node(value)
+        if self.__head is None:
+            new_node.next_node = None
+            self.__head = new_node
+        elif self.__head.data > value:
+            new_node.next_node = self.__head
+            self.__head == new_node
+        else:
+            tmp_node = self.__head
+            while (tmp_node.next_node is not None and
+                    tmp_node.next_node.data < value):
+                tmp_node = tmp_node.next_node
+            new_node.next_node = tmp_node.next_node
+            tmp_node.next_node = new_node
+"""String representation"""
+def __str__(self):
+    """String representation of the list"""
+    result = []
+    current = self.__head
+    while current is not None:
+        result.append(str(current.data))
+        current = current.next_node
+    return ('\n'.join(result))

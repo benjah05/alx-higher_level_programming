@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Module math has methods to help calculate area and circumf"""
+
+
 import math
 """Define class MagicClass"""
 

@@ -5,10 +5,8 @@ import math
 
 
 class MagicClass:
-    """Present class MagicClass
-    Attributes:
-        __radius (int): radius of a circle
-    """
+    """Present class MagicClass"""
+
     def __init__(self, radius=0):
         self.__radius = radius
         if type(radius) is not int and type(radius) is not float:
@@ -28,4 +26,3 @@ class MagicClass:
             circumf of the circle
         """
         return ((math.pi * 2) * self.__radius)
-

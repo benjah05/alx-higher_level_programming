@@ -25,16 +25,16 @@ with open("23-answer.txt", "w") as f:
     print("Yes", file=f)
 """Who am I?"""
 with open("24-answer.txt", "w") as f:
-    print("No", file=f)
+    print("True", file=f)
 """Tuple or not"""
 with open("25-answer.txt", "w") as f:
-    print("True", file=f)
+    print("False", file=f)
 """Empty is not empty"""
 with open("26-answer.txt", "w") as f:
-    print("False", file=f)
+    print("True", file=f)
 """Still the same?"""
 with open("27-answer.txt", "w") as f:
-    print("Yes", file=f)
+    print("No", file=f)
 """Same or not?"""
 with open("28-answer.txt", "w") as f:
     print("Yes", file=f)

@@ -10,7 +10,7 @@ with open("2-answer.txt", "w") as f:
     print("No", file=f)
 """Right count="""
 with open("3-answer.txt", "w") as f:
-    print("No", file=f)
+    print("Yes", file=f)
 """Right count ="""
 with open("4-answer.txt", "w") as f:
     print("Yes", file=f)
@@ -28,7 +28,7 @@ with open("8-answer.txt", "w") as f:
     print("True", file=f)
 """Is really the same"""
 with open("9-answer.txt", "w") as f:
-    print("False", file=f)
+    print("True", file=f)
 """And with a list, is it equal"""
 with open("10-answer.txt", "w") as f:
     print("True", file=f)

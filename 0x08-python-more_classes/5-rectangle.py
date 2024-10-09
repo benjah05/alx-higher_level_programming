@@ -91,6 +91,7 @@ class Rectangle:
         for i in range(self.__height):
             rect.append("#" * self.__width)
         return ("\n".join(rect))
+
     def __del__(self):
         """Print message after instance deletion"""
         print("Bye rectangle...")

@@ -97,12 +97,14 @@ class Rectangle:
         for i in range(self.__height):
             rect.append(symbol * self.__width)
         return ("\n".join(rect))
+
     def __del__(self):
         """Print message after instance deletion
            And count number of instances deleted
         """
         self.__class__.number_of_instances -= 1
         print("Bye rectangle...")
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """Compare 2 rectangles

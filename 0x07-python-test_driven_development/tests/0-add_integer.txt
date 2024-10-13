@@ -1,14 +1,14 @@
 ======================
-0-add_integer
+2-matrix_divided
 ======================
 
-Add integer module is the unit test for the add_integer function
+MAtrix divided module is the unit test for the matrix_divided function
 
 =====================
 
 ::
 
-	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer = __import__('2-matrix_divided').matrix_divided
 	>>> add_integer(1, 2)
 	3
 

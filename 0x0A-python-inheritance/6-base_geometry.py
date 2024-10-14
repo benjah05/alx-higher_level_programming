@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Define class Geometry"""
+
+
 class BaseGeometry:
     """BaseGeometry with method area
     Raises:

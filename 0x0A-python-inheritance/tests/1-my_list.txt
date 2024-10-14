@@ -1,0 +1,20 @@
+==============================
+1-my_list
+==============================
+
+Print a list in ascending order
+
+==============================
+
+::
+	>>> MyList = __import__('1-my_list').MyList
+	>>> my_list = MyList([1, 5, 2, 3, 4])
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+
+Largest number at the start
+
+::
+	>>> my_list = MyList([5, 3, 2, 1, 4])
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]

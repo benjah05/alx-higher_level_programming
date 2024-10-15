@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """Handle serialization & deserialization with JSON"""
 import json
 

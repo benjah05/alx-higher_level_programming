@@ -3,6 +3,9 @@
 
 
 class MyList(list):
-    """Print sorted list"""
+    """subclass of list"""
+
     def print_sorted(self):
-        print(sorted(self))
+        """Initialize a list"""
+        sorted_list = sorted(self)
+        print(sorted_list)

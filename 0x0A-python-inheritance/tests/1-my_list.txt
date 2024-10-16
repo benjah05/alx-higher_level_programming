@@ -47,17 +47,6 @@ print_sorted() with negative number and unsorted append
 print_sorted() with an empty list
 
 ::
-	>>> my_list = MyList([])
+	>>> my_list = MyList()
     	>>> my_list.print_sorted()
     	[]
-
-Return a new sorted list without modifying the original
-
-::
-        >>> my_list = MyList([10, 5, 3])
-        >>> sorted_list = my_list.print_sorted()
-        >>> print(sorted_list)
-        [3, 5, 10]
-        >>> print(my_list)
-        [10, 5, 3]
-

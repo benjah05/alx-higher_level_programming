@@ -21,5 +21,5 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         """Print with magic method '__str__'"""
         string = "[" + str(self.__class__.__name__) + "] " + str(self.__width)
-                        + "/" + str(self.__height)
+        string += "/" + str(self.__height)
         return (string)

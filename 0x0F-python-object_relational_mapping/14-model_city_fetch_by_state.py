@@ -6,12 +6,11 @@
     The script performs the following:
     - Joins the State and City tables based on their relationship.
     - Orders the results by City.id.
-    - Outputs each City object in the format: <state_name>: (<city_id>) <city_name>.
+    - Output format: <state_name>: (<city_id>) <city_name>.
 """
 import sys
 from model_state import Base, State
 from model_city import City
-
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import asc
@@ -26,8 +25,9 @@ if __name__ == "__main__":
     start.configure(bind=engine)
 
     session = start()
-    stmt = session.query(State, City).join(City).order_by(asc(City.id)).all()
-    for i, j in stmt:
+    filter_query = session.query(State, City).join(
+            City).order_by(asc(City.id)).all()
+    for i, j in filter_query:
         print("{:s}: ({:d}) {:s}".format(i.name, j.id, j.name))
 
     session.close()

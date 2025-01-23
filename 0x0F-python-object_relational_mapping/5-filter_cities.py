@@ -19,11 +19,15 @@ if __name__ == "__main__":
             charset="utf8"
             )
     cur = db.cursor()
-    filter_query = """SELECT cities.name FROM cities WHERE cities.state_id = ( SELECT states.id
-    FROM states WHERE states.name = %s) ORDER BY cities.id ASC"""
+    filter_query = """SELECT cities.name FROM cities
+        WHERE cities.state_id LIKE BINARY ( SELECT states.id
+        FROM states WHERE states.name LIKE BINARY %s)
+        ORDER BY cities.id ASC"""
     cur.execute(filter_query, (state_name,))
     rows = cur.fetchall()
+    result = []
     for row in rows:
-        print(row)
+        result += row
+    print(', '.join(result))
     cur.close()
     db.close()

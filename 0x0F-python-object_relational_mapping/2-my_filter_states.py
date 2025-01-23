@@ -19,7 +19,9 @@ if __name__ == "__main__":
             charset="utf8"
             )
     cur = db.cursor()
-    filter_query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(searched_name)
+    filter_query = """
+        SELECT * FROM states WHERE name LIKE BINARY '{:s}' ORDER BY id ASC
+    """.format(searched_name)
     cur.execute(filter_query)
     rows = cur.fetchall()
     for row in rows:

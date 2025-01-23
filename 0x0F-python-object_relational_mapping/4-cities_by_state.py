@@ -18,8 +18,9 @@ if __name__ == "__main__":
             charset="utf8"
             )
     cur = db.cursor()
-    filter_query = """SELECT cities.id, cities.name, states.name
-    FROM cities, states WHERE cities.state_id = states.id ORDER BY cities.id ASC"""
+    filter_query = """
+        SELECT cities.id, cities.name, states.name FROM cities, states
+        WHERE cities.state_id = states.id ORDER BY cities.id ASC"""
     cur.execute(filter_query)
     rows = cur.fetchall()
     for row in rows:

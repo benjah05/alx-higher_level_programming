@@ -12,7 +12,14 @@ Base = declarative_base()
 
 
 class State(Base):
-    """Class State that inherits from Base"""
+    """
+    Class State that inherits from Base
+    args:
+        __tablename__: the name of the table
+        id: id column (primary key)
+        name: name column
+        engine: establish the connection with CL arguments
+    """
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)

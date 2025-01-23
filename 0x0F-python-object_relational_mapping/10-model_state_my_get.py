@@ -15,7 +15,8 @@ if __name__ == "__main__":
     start = sessionmaker()
     start.configure(bind=engine)
     session = start()
-    filter_query = session.query(State).filter(State.name == searched_name).order_by(asc(State.id)).all()
+    filter_query = session.query(State).filter(
+            State.name == searched_name).order_by(asc(State.id)).one_or_none()
     if filter_query:
         print("{:d}".format(filter_query.id))
     else:

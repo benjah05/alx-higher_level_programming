@@ -15,7 +15,7 @@ if __name__ == "__main__":
     start.configure(bind=engine)
     session = start()
     """filter_query = session.query(State).order_by(asc(State.id)).all()"""
-    new_state = State(name = 'Louisiana')
+    new_state = State(name='Louisiana')
     session.add(new_state)
     session.commit()
     print("{:d}".format(new_state.id))

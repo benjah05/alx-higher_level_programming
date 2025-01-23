@@ -14,8 +14,9 @@ if __name__ == "__main__":
     start = sessionmaker()
     start.configure(bind=engine)
     session = start()
-    filter_query = State.delete().where(State.name.like("%a%")).all()
-    for i in filter_query:
+    filter_query = State.delete().where(State.name.like("%a%"))
+    result = filter_query.all()
+    for i in result:
         session.delete(i)
     session.commit()
 

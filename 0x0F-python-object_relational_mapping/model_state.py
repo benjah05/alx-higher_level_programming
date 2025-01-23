@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-    First class mode
-    Create class State that inherits from declarative_base (Base class)
+    python file that contains the class definition
+    of a State and an instance Base = declarative_base()
 """
 import sys
 from sqlalchemy import Column, Integer, String

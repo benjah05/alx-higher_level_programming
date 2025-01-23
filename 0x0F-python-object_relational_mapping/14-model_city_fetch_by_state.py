@@ -28,4 +28,5 @@ if __name__ == "__main__":
     stmt = session.query(State, City).join(City).order_by(asc(City.id)).all()
     for i, j in stmt:
         print("{:s}: ({:d}) {:s}".format(i.name, j.id, j.name))
+
     session.close()

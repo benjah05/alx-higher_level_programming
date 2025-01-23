@@ -1,11 +1,16 @@
 #!/usr/bin/python3
 """
-    print all City objects from the database hbtn_0e_14_usa
+    Script that prints all City objects and their associated State names
+    from the database hbtn_0e_14_usa.
+
+    The script performs the following:
+    - Joins the State and City tables based on their relationship.
+    - Orders the results by City.id.
+    - Outputs each City object in the format: <state_name>: (<city_id>) <city_name>.
 """
 import sys
 from model_state import Base, State
 from model_city import City
-
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import asc

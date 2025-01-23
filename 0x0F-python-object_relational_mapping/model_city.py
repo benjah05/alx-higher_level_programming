@@ -3,7 +3,7 @@
 
 import sys
 from model_state import Base
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, ForeignKey
 
 
 class City(Base):

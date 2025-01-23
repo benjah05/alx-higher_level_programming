@@ -9,7 +9,7 @@
     - Output format: <state_name>: (<city_id>) <city_name>.
 """
 import sys
-from model_state import Base, State
+from model_state import State
 from model_city import City
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker

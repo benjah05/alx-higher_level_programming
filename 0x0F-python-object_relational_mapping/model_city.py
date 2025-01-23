@@ -4,6 +4,7 @@ import sys
 from model_state import Base
 from sqlalchemy import Column, Integer, String
 
+
 class City(Base):
     """Class City that inherits from Base"""
     __tablename__ = 'cities'

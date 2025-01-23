@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 """
-script that prints all City objects from the database hbtn_0e_14_usa
+    print all City objects from the database hbtn_0e_14_usa
 """
 import sys
 from model_state import Base, State
 from model_city import City
+
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import asc
+
 
 if __name__ == "__main__":
     """Join State and City tables"""

@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """First class model"""
+
 import sys
 from model_state import Base
 from sqlalchemy import Column, Integer, String
